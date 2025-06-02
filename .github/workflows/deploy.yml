@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]  # Changed from 'main' to 'master' to match your default branch
+    branches: [ master ]  # Using your default branch
   workflow_dispatch:
 
 permissions:
@@ -16,16 +16,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: 'npm'
+      
       - name: Install dependencies
+        # Using install instead of ci for better compatibility
         run: npm install
+      
       - name: Build
         run: npm run build
-      - name: Upload artifact
+      
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./dist
