@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 
 export default defineConfig({
-  base: "atlas5301/ai-agent-ironic",
+  base: "/ai-agent-ironic/",
   plugins: [react()],
   resolve: {
     alias: {
