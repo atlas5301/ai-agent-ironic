@@ -1,0 +1,71 @@
+.solutions-section {
+  padding: 6rem 0;
+  background-color: white;
+}
+
+.flowchart-container {
+  width: 100%;
+  height: 400px;
+  margin: 3rem 0;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.flowchart-container canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.solutions-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.solutions-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.solutions-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--light-background);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.feature-text {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .solutions-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .flowchart-container {
+    height: 300px;
+  }
+}
